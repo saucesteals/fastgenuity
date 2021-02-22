@@ -1,6 +1,6 @@
 {
   "name": "Fastgenuity",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "manifest_version": 2,
   "description": "Better and faster experience on Edgenuity",
   "web_accessible_resources": [
