@@ -8,7 +8,7 @@ iFN.listen("ChildFrameLoaded", function(data) {
     }
     const script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = {{path}};
+    script.src = "{{path}}";
     const doc = document.querySelector("#stageFrame").contentDocument
     doc.head.appendChild(script);
 })
@@ -17,7 +17,7 @@ iFN.listen("ChildFrameLoaded", function(data) {
 function loadFastGenuity() {
     const script = document.createElement("script");
     script.type = "text/javascript";
-    script.innerHTML = listener.replace("{{path}}", '"' + fsGPath + '"');
+    script.innerHTML = listener.replace("{{path}}", fsGPath);
     document.head.appendChild(script);
 };
 
