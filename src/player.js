@@ -24,7 +24,7 @@ window.fsG = window.fsG || {
       fsG.lastVideoSource = API.Video.video.src;
 
       API.Video.video.addEventListener("progress", () => {
-        fsg.log("attemping to skip on progress event");
+        fsG.log("attemping to skip on progress event");
         API.FrameChain.nextFrame();
       });
 
