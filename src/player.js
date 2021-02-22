@@ -19,8 +19,8 @@ window.fsG = window.fsG || {
   },
 
   startVideoTask: () => {
-    fsG.log("starting video task");
     if (API.Video.video && API.Video.video.src !== fsG.lastVideoSource) {
+      fsG.log("starting video task");
       fsG.lastVideoSource = API.Video.video.src;
 
       API.Video.video.addEventListener("progress", () => {
