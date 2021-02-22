@@ -3,7 +3,7 @@ Faster and better experience on Edgenuity.
 
 ### **Installation ⚙️ (Chromium based)**
 
-1. [Download the main branch](https://github.com/saucesteals/essentials/archive/main.zip)
+1. [Download the main branch](https://github.com/saucesteals/fastgenuity/archive/main.zip)
 2. Move the folder inside the zip to another location
 3. Go to `chrome://extensions` in your browser
 4. Enable developer mode on the top right
