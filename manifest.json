@@ -19,9 +19,8 @@
   "content_scripts": [
     { 
       "run_at": "document_end",
-      "all_frames": true,
       "matches": [
-        "*://*.edgenuity.com/contentengine*"
+        "*://*.edgenuity.com/Player/"
       ],
       "js": [
         "src/inject.js"

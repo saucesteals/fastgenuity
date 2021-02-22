@@ -1,36 +1,53 @@
-const fsG = {
+window.fsG = window.fsG || {
   inited: false,
+  lastVideoSource: "",
+  log: (message) => console.log("[fastgenuity] " + message),
   removeInvisDiv: () => {
-    const elem = API.parentWindow.$("#invis-o-div")
-    elem && elem.remove()
+    const elem = $("#invis-o-div");
+    elem && elem.remove();
   },
 
   showAllQuestions: () => {
-    API.childWindow.document.querySelectorAll("[fstack]").forEach((elem) => {elem.style = ""})
+    API.childWindow.document.querySelectorAll("[fstack]").forEach((elem) => {
+      elem.style = "";
+    });
   },
 
-  startTasks: () => {
-    const videoDiv = API.parentWindow.$("#frameArea")[0].children[1]
-    if (videoDiv && videoDiv.style.opacity !== "0.01") fsG.startVideoTask()
-    fsG.startQuestionTask()
-
+  MessageHandler: (e) => {
+    setTimeout(fsG.startVideoTask, 6000);
+    fsG.startQuestionTask();
   },
 
   startVideoTask: () => {
-    if (API.Video.video) API.Video.video.addEventListener("ended", API.FrameChain.nextFrame)
+    fsG.log("starting video task");
+    if (API.Video.video && API.Video.video.src !== fsG.lastVideoSource) {
+      fsG.lastVideoSource = API.Video.video.src;
+
+      API.Video.video.addEventListener("progress", () => {
+        fsg.log("attemping to skip on progress event");
+        API.FrameChain.nextFrame();
+      });
+
+      API.Video.video.addEventListener("ended", () => {
+        console.log("attemping to skip on ended event");
+        API.FrameChain.nextFrame();
+      });
+      
+    }
   },
 
   startQuestionTask: () => {
+    fsG.log("starting question task");
     fsG.removeInvisDiv();
     fsG.showAllQuestions();
   },
 
   init: () => {
-    console.log("fastgenuity operating on new frame")
-    fsG.inited = true
-    fsG.startTasks()
-  }
+    fsG.log("operating on a new staging frame");
+    window.parent.addEventListener("message", fsG.MessageHandler);
+    fsG.inited = true;
+  },
 };
+var fsG = window.fsG;
 
-
-if (!fsG.inited) fsG.init()
+if (!fsG.inited) fsG.init();
