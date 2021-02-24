@@ -1,7 +1,12 @@
 ## **FastGenuity**
-Faster and better experience on Edgenuity.
+### **Faster and better experience on Edgenuity.**
+---
+## **Get it directly from the Chrome WebStore!**
+  - Click the `Add` button [extension page](https://chrome.google.com/webstore/detail/fastgenuity/lohcmdockimmldpiioinamcimopfkkfk) and enjoy!
 
-### **Installation ⚙️ (Chromium based)**
+- Updates take 1-2 days to get published/updated on the chrome webstore
+
+### **Manual Installation ⚙️ (Chromium based)**
 
 1. [Download the main branch](https://github.com/saucesteals/fastgenuity/archive/main.zip)
 2. Move the folder inside the zip to another location
