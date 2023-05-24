@@ -5,7 +5,7 @@
   "description": "Better and faster experience on Edgenuity",
   "web_accessible_resources": [
     {
-      "resources": ["src/player.js"],
+      "resources": ["src/player.js", "src/loader.js"],
       "matches": ["https://*.edgenuity.com/*"]
     }
   ],
