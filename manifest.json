@@ -14,7 +14,6 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "host_permissions": ["*://*.edgenuity.com/Player*"],
   "content_scripts": [
     {
       "run_at": "document_end",
