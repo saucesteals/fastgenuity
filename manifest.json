@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": ["*://*.edgenuity.com/Player/"],
+      "matches": ["https://*.edgenuity.com/player*"],
       "js": ["src/inject.js"]
     }
   ]
