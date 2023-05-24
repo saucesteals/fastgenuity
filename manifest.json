@@ -1,28 +1,23 @@
 {
   "name": "Fastgenuity",
   "version": "0.1.2",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "Better and faster experience on Edgenuity",
-  "web_accessible_resources": [
-    "src/*.js"
-  ],
+  "web_accessible_resources": {
+    "resources": ["src/player.js"],
+    "matches": ["*://*.edgenuity.com/Player*"]
+  },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "permissions": [
-    "*://*.edgenuity.com/Player*"
-  ],
+  "permissions": ["*://*.edgenuity.com/Player*"],
   "content_scripts": [
-    { 
+    {
       "run_at": "document_end",
-      "matches": [
-        "*://*.edgenuity.com/Player/"
-      ],
-      "js": [
-        "src/inject.js"
-      ]
+      "matches": ["*://*.edgenuity.com/Player/"],
+      "js": ["src/inject.js"]
     }
   ]
 }
