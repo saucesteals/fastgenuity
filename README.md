@@ -1,10 +1,16 @@
 ## **FastGenuity**
+
+
+
 ### **Faster and better experience on Edgenuity.**
 ---
-## **Get it directly from the Chrome WebStore!**
-  - Click the `Add` button [extension page](https://chrome.google.com/webstore/detail/fastgenuity/lohcmdockimmldpiioinamcimopfkkfk) and enjoy!
+### UPDATE: _As of Aug 16, 2023 Edgenuity has taken down the Fastgenuity extension on the Google WebStore_
+### _You **CAN** still install it with the manual instructions below. <br><sup><sub>Note that updates will no longer be automatic</sub></sup>_
+---
+~~**Get it directly from the Chrome WebStore!**~~
+  - ~~Click the `Add` button [extension page](https://chrome.google.com/webstore/detail/fastgenuity/lohcmdockimmldpiioinamcimopfkkfk) and enjoy!~~
 
-- Updates take 1-2 days to get published/updated on the chrome webstore
+- ~~Updates take 1-2 days to get published/updated on the chrome webstore~~
 
 ### **Manual Installation ⚙️ (Chromium based)**
 
